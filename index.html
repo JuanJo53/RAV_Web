@@ -6,66 +6,149 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<meta name="author" content="Juan José Fernández Duarte" />
 		<title>RAV</title>
-		<link rel="icon" href="">
-		<link rel="stylesheet" href="estilos.css">
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+			crossorigin="anonymous"
+		/>
+		<!--Aqui viene el icono de RAV
+			<link rel="icon" href=""
+			>-->
+		<link rel="stylesheet" href="index.css" />
 	</head>
 	<body>
-		<main>
-			<header style="color: blue" class="header">
-				<img src="img/rios.jpg" alt="http://2.bp.blogspot.com/-Dqphjvtja2Y/U5YKe6w8uOI/AAAAAAAAAeg/3w1Y9f--kmo/s1600/rios.jpg" width="1200" height="280">
-				<nav class="menu">					
-					<!--container-->
-					<div class="container">
-						<div class="navbar-header">
-							<!--//collapse button-->
-							<!--principal link-->
-							<a class="navbar-brand mx-1" href="index.html">
-								<!--logo image-->
-								<img width="60" height="60" src="../../../img/printer.png" alt="" />
-								<!--//logo image-->
-								<!--logo title-->
-								<h5 class="d-inline align-middle mx-1">RAV</h5>
-								<!--//logo title-->
+		<!--Header-->
+		<nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container">
+				<a class="navbar-brand" href="#">RAV</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="#">Nuestro Proposito <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Alimento Diario</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a
+								class="nav-link dropdown-toggle"
+								href="#"
+								id="navbarDropdown"
+								role="button"
+								data-toggle="dropdown"
+								aria-haspopup="true"
+								aria-expanded="false"
+							>
+								Nuestro Credo
 							</a>
-							<!--//principal link-->
-						</div>
-						<!--collaspe-->
-						<div>
-							<ul class="nav_links">
-								<li class="nav-item link my-auto">
-									<a href="">NUESTRO PROPOSITO</a>
-								</li>
-								<li class="nav-item link my-auto">
-									<a href="">NUESTRO CREDO</a href="">
-								</li>
-								<li class="nav-item">
-									<a href="">NOTICIAS</a>
-								</li>
-								<li class="nav-item">
-									<a href="">ASI SERA LA VENIDA DEL HIJO DEL HOMBRE</a>
-								</li>
-								<li class="nav-item">
-									<a href="">MEDITAD EN VUESTROS CAMINOS</a>
-								</li>
-							</ul>
-						</div>
-						<!--//collaspe-->
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="#">Finalidad de la Fe</a>
+								<a class="dropdown-item" href="#">Proyeccion de la Fe</a>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a
+								class="nav-link dropdown-toggle"
+								href="#"
+								id="navbarDropdown"
+								role="button"
+								data-toggle="dropdown"
+								aria-haspopup="true"
+								aria-expanded="false"
+							>
+								Noticias
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="#">Ciencia y Tecnologia</a>
+								<a class="dropdown-item" href="#">Profecia</a>
+								<a class="dropdown-item" href="#">Desastres Naturales</a>
+								<a class="dropdown-item" href="#">Israel</a>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Asi sera la venida del Hijo del Hombre</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Meditad en Vuestros</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!--header-->
+		<!--Main-->
+		<main id="main">
+			<div id="carousel" class="carousel slide" data-ride="carousel" data-pause="false">
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img src="/img/rios.jpg" class="d-block w-100" alt="Rios1" />
 					</div>
-					<!--//container-->
-				</nav>
-			</header>
-			<article>
-				<section class="titulos">
-					<h1 class="titulos-text">La obediencia a Dios</h1>
-				</section>
-				<section class="contenidos">
-					<p class="contenidos-parrafo">Tú que estás leyendo este mensaje debes saber que al Señor nuestro Dios, le agrada la obediencia, como a un padre le gusta que sus hijos le obedezcan; a Dios le agrada la obediencia a sus mandamientos, estatutos y preceptos, que están escritos en su palabra “La Biblia”.
-						El que oye, hace y cumple su palabra, es obediente a Dios, como dice: “Cualquiera, pues, que me oye estas palabras, y las hace, le compararé a un hombre prudente, que edificó su casa sobre la roca.  Descendió lluvia, y vinieron ríos, y soplaron vientos, y golpearon contra aquella casa; y no cayó, porque estaba fundada sobre la roca. Pero cualquiera que me oye estas palabras y no las hace, le compararé a un hombre insensato, que edificó a su casa sobre la arena; y descendió lluvia, y vinieron ríos, y soplaron vientos, y dieron con ímpetu contra aquella casa; y cayó, y fue grande su ruina”  MATEO 7: 24-27; no seas imprudente, escucha las palabras de Dios, no peques de insensato, de altivo o de soberbió, busca la voluntad de Dios, cambia tus caminos, busca la Santidad, porque sin santidad es imposible agradar a Dios y no podrás llegar a su reino, obedece su palabra, vívela, “Más buscad primeramente el reino de Dios y su justicia, y todas estas cosas os serán añadidas .  Así que, no os afanéis por el día de mañana, porque el día de mañana traerá su afán.  Basta a cada día su propio mal”  MATEO 6: 33-34; muchas veces la rutina, del trabajo, la universidad o el colegio, nos distraen y nos llevan al afán de todos los días; por eso no debes preocuparte de que vas a vestir, o que vas a comer, el Señor sabe tus necesidades antes que se las pidas y Él te dará según su propósito; escrito esta: “…… para hacer saber que no solo de pan vivirá el hombre, más de todo lo que sale de la boca de Jehová vivirá el hombre” DEUTERONOMIO 8: 3b.; aunque nosotros nos apartamos de sus mandamientos y no somos fieles a Él, Él Señor Jesucristo nuestro Dios mantiene su fidelidad hacia nosotros y por su infinito amor y misericordia, todos los días se renueva su misericordia, “y hago misericordia a millares, a los que  me aman y guardan mis mandamientos”  ÉXODO 20:6, solo debes decidir en tu corazón obedecer, y cambiar de actitud.
-						En el libro de Proverbios Capitulo 3, nos habla sobre la obediencia y en una porción nos dice: “Hijo mío, no te olvides de mí ley, y tu corazón guarde mis mandamientos; Porque largura de días y años de vida Y paz te aumentarán.  Nunca se aparten de ti la misericordia y la verdad; Átalas a tu cuello, Escríbelas en la tabla de tu corazón; A Y hallaráis gracia y buena opinión, Ante los ojos de Dios y de los hombres” PROVERBIOS 3: 1-4, aquí nos muestra su misericordia y amor eterno, porque nos está dando pautas para vivir mejor, como nos dice también “Hijos obedeced al Señor a vuestros padres, porque esto es justo” EFESIOS 6:1, como podrás darte cuenta todos sus mandamientos y preceptos están escritos en su palabra, solo debes disponer a cumplirlas.
-						Te exhorto, a que medites en tus caminos, pienses en lo que estás haciendo de tu vida; aún tienes tiempo, ya que mientras tengamos vida, tenemos tiempo y esperanza para arrepentirnos. “Así ha dicho Jehová de los ejércitos; Meditad sobre vuestros caminos.  Subid al monte, y traed madera, y reedificad la casa; y pondré en ella mi voluntad, y seré glorificado, ha dicho Jehova” HAGEO 1: 7-8. Podemos obedecer en cualquier circunstancia, porque, no es con nuestra propia fuerza, ni con ejército, sino con su Santo Espíritu (ZACARIAS 4:6), solo debes decir hacerlo.</p>
-				</section>
-			</article>
-			<aside>				
+					<div class="carousel-item">
+						<img src="/img/rios2.jpg" class="d-block w-100" alt="Rios2" />
+					</div>
+					<div class="carousel-item">
+						<img src="/img/riversunshining2.jpg" class="d-block w-100" alt="Rios3" />
+					</div>
+					<div class="overlay">
+						<div class="container">
+							<div class="row align-items-center">
+								<div class="col-md-6 offset-md-6 text-center text-md-right">
+									<h1>Rios de Agua Viva</h1>
+									<h2>Preparandonos para el Dia del Arrebatamiento</h2>
+									<p class="d-none d-md-block">
+										Esta es un apagina con el objetivo de disfundir la palabra de Dios y la venida de Cristo. Aqui encontraras
+										contenido para acercar mas tu vida y tu corazon a Dios, para asi puedas salvar tu alma del tormento eterno.
+									</p>
+									<button class="btn btn-primary" type="button">Contactanos</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!--Main-->
+		<!--Noticias Todas-->
+		<section id="noticias-todas" class="mt-4">
+			<div class="container">
+				<div class="row">
+					<div class="col text-center text-uppercase">
+						<small>Mira las</small>
+						<h2>Noticias</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<div class="card">
+							<img src="/img/youtube-dark.png" class="card-img-top" alt="..." />
+							<div class="card-body">
+								<h5 class="card-title">Apple lanza la computadora mas potente y cara de su historia</h5>
+								<p class="card-text">
+									Some quick example text to build on the card title and make up the bulk of the card's content.
+								</p>
+								<a href="#" class="btn btn-primary">Go somewhere</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--Noticias Todas-->
+
+		<div class="container">
+			<aside>
 				<section class="Diario">
 					<h5 class="diario-titulo">
 						ALIMENTO DIARIO
@@ -79,42 +162,72 @@
 						Romanos 6:23
 					</span>
 				</section>
-			</aside>	
+			</aside>
 			<nav>
 				<section class="contacto">
 					<h2 class="contacto-titulo">Contactanos</h2>
 					<form action="/mensaje" class="contacto-form">
 						<label for="nombre">Dejanos tu nombre:</label>
-						<input type="text" placeholder="Nombre Completo" id="nombre">
-						<br><br>
+						<input type="text" placeholder="Nombre Completo" id="nombre" />
+						<br /><br />
 						<label for="correo">Dejanos tu email:</label>
-						<input type="text" placeholder="Correo electronico" id="email">
-						<br><br>
-						<label for="mensaje">Dinos tu mensaje o comentario:</label>				
-						<br><br>
+						<input type="text" placeholder="Correo electronico" id="email" />
+						<br /><br />
+						<label for="mensaje">Dinos tu mensaje o comentario:</label>
+						<br /><br />
 						<textarea name="mensaje" id="mensaje" cols="33" rows="7" maxlength="200"></textarea>
-						<br>
+						<br />
 						<button>Enviar Mensaje</button>
 					</form>
-				</section>	
-			</nav>	
-			<footer class="footer">
-				<div class="contacto-footer">
-					<h4>
-						Puedes mandarnos algo, aqui:
-					</h4>
-					<li>
-						escritoestarav@gmail.com
-					</li>
+				</section>
+			</nav>
+		</div>
+		<!--Footer-->
+		<footer id="footer" class="pb-4 pt-4">
+			<div class="container">
+				<div class="row text-center">
+					<div class="col">
+						<h4>
+							Puedes mandarnos algo, aqui:
+						</h4>
+						<div>
+							<address>
+								<a href="mailto:escritoestarav@gmail.com">escritoestarav@gmail.com</a>
+							</address>
+						</div>
+					</div>
+					<div class="col">
+						<h4>
+							Siguenos en Nuestras Redes
+						</h4>
+						<a href="https://www.youtube.com/channel/UCp1PiCAGhFYn20BlkNGVTRA" target="youtube">
+							<img class="youtube" src="img/youtube-dark.png" alt="" width="70" height="70" />
+						</a>
+						<a
+							href="https://www.facebook.com/Rios-De-Agua-Viva-Preparandonos-Para-El-Dia-del-Rapto-1110444619026844/"
+							target="facebook"
+						>
+							<img class="facebook" src="img/facebook-dark.png" alt="" width="50" height="50" />
+						</a>
+					</div>
 				</div>
-				<div class="redes">
-					<h4>
-						Siguenos en Nuestras Redes
-					</h4>
-					<img class="youtube" src="img/youtube-dark.png" alt="" width="70" height="70">
-					<img class="facebook" src="img/facebook-dark.png" alt="" width="50" height="50">
-				</div>
-			</footer>
-		</main>
+			</div>
+		</footer>
+		<!--Footer-->
+		<script
+			src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+			integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+			crossorigin="anonymous"
+		></script>
 	</body>
 </html>
