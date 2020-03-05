@@ -5,6 +5,11 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+body {
+	background-color: #a7aff6;
+	/* width: 960px;
+	margin: 15px auto; */
+}
 main {
 	display: grid;
 	grid-template-areas:
@@ -20,7 +25,7 @@ main {
 header {
 	grid-area: topbar;
 	text-align: left;
-	background-color: #ffffff;
+	background-color: #9c98eb;
 }
 li,
 a {
@@ -29,9 +34,7 @@ a {
 }
 nav {
 	grid-area: contact;
-	display: flex;
 	justify-content: space-between;
-	display: inline;
 }
 .nav_links ul {
 	list-style: none;
@@ -43,24 +46,32 @@ nav {
 .nav_links > li > a {
 	display: block;
 	padding: 15px 20px;
-	color: #ffffff;
+	color: #5106ff;
 	text-decoration: none;
 }
 .nav_links li a:hover {
 	transition: all 0.3s ease 0s;
+	color: #ff0000;
 }
 article {
 	grid-area: content;
 }
 aside {
 	grid-area: sidebar;
+	text-align: center;
 }
-
 footer {
+	display: flex;
+	width: 1200px;
 	grid-area: footer;
+	background-color: #9c98eb;
 }
 /* GRID ITEMS*/
 
+.footer div {
+	display: inline-block;
+	padding: 0px 80px;
+}
 #mensaje {
 	resize: none;
 }
