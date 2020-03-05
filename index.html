@@ -17,9 +17,9 @@
 			>-->
 		<link rel="stylesheet" href="index.css" />
 	</head>
-	<body>
+	<body data-spy="scroll" data-target="#navbar" data-offset="56">
 		<!--Header-->
-		<nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
 			<div class="container">
 				<a class="navbar-brand" href="#">RAV</a>
 				<button
@@ -33,10 +33,10 @@
 				>
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<div class="collapse navbar-collapse" id="navbar">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item active">
-							<a class="nav-link" href="#">Nuestro Proposito <span class="sr-only">(current)</span></a>
+							<a class="nav-link" href="#main">Nuestro Proposito <span class="sr-only">(current)</span></a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#">Alimento Diario</a>
@@ -61,7 +61,7 @@
 						<li class="nav-item dropdown">
 							<a
 								class="nav-link dropdown-toggle"
-								href="#"
+								href="#noticias-todas"
 								id="navbarDropdown"
 								role="button"
 								data-toggle="dropdown"
@@ -111,7 +111,7 @@
 										Esta es un apagina con el objetivo de disfundir la palabra de Dios y la venida de Cristo. Aqui encontraras
 										contenido para acercar mas tu vida y tu corazon a Dios, para asi puedas salvar tu alma del tormento eterno.
 									</p>
-									<a class="btn btn-primary" href="#contacto" role="button">Contactanos</a>
+									<a class="btn btn-primary" data-toggle="modal" data-target="#modalContact" role="button">Contactanos</a>
 								</div>
 							</div>
 						</div>
@@ -212,57 +212,6 @@
 			</div>
 		</section>
 		<!--Noticias Todas-->
-		<!--Contacto-->
-		<section id="contacto" class="pt-2 pb-3">
-			<div class="container">
-				<div class="row">
-					<div class="col text-center">
-						<h2><strong>Contactanos</strong></h2>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col text-center">
-						Mandanos un mensaje, comentario o
-						<abbr data-toggle="tooltip" title="para que oremos por lo que tu nos digas">peticion de oracion</abbr>, estaremos
-						pendientes de lo que nos digas!
-					</div>
-				</div>
-				<div class="row">
-					<div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2 pt-2">
-						<form>
-							<div class="form-row">
-								<div class="form-group col-12 col-md-6">
-									<label for="inputEmail4">Nombre</label>
-									<input type="text" class="form-control" placeholder="Tu nombre completo" />
-								</div>
-								<div class="form-group col-12 col-md-6">
-									<label for="inputEmail4">Email</label>
-									<input type="text" class="form-control" placeholder="Tu correo electronico" />
-								</div>
-							</div>
-							<div class="form-row">
-								<div class="form-group col">
-									<textarea
-										name="mensaje"
-										class="form-control form-control-lg"
-										placeholder="Tu mensaje o comentario"
-										id="mensaje"
-										cols="30"
-										rows="3"
-									></textarea>
-								</div>
-							</div>
-							<div class="form-row">
-								<div class="form-group col">
-									<button type="button" class="btn btn-primary btn-block">Enviar</button>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!--Contacto-->
 		<div class="container">
 			<aside>
 				<section class="Diario">
@@ -312,6 +261,77 @@
 			</div>
 		</footer>
 		<!--Footer-->
+		<!-- Modal Contacto -->
+		<div class="modal fade" id="modalContact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel"><strong>Contactanos</strong></h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<!--Contacto-->
+						<section id="contacto" class="pt-2 pb-3">
+							<div class="container">
+								<div class="row">
+									<div class="col text-center">
+										<h2><strong></strong></h2>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col text-center">
+										Mandanos un mensaje, comentario o
+										<abbr data-toggle="tooltip" title="para que oremos por lo que tu nos digas">peticion de oracion</abbr>,
+										estaremos pendientes de lo que nos digas!
+									</div>
+								</div>
+								<div class="row">
+									<div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2 pt-2">
+										<form>
+											<div class="form-row">
+												<div class="form-group col-12 col-md-6">
+													<label for="inputEmail4">Nombre</label>
+													<input type="text" class="form-control" placeholder="Tu nombre completo" />
+												</div>
+												<div class="form-group col-12 col-md-6">
+													<label for="inputEmail4">Email</label>
+													<input type="text" class="form-control" placeholder="Tu correo electronico" />
+												</div>
+											</div>
+											<div class="form-row">
+												<div class="form-group col">
+													<textarea
+														name="mensaje"
+														class="form-control form-control-lg"
+														placeholder="Tu mensaje o comentario"
+														id="mensaje"
+														cols="30"
+														rows="3"
+													></textarea>
+												</div>
+											</div>
+											<div class="form-row">
+												<div class="form-group col">
+													<button type="button" class="btn btn-primary btn-block">Enviar</button>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</section>
+						<!--Contacto-->
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Modal Contacto-->
 		<script
 			src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 			integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
