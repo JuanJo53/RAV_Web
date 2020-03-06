@@ -229,6 +229,57 @@
 				</section>
 			</aside>
 		</div>
+		<!--Contacto-->
+		<section id="contacto" class="pt-2 pb-3">
+			<div class="container">
+				<div class="row">
+					<div class="col text-center">
+						<h2><strong>Contactanos</strong></h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col text-center">
+						Mandanos un mensaje, comentario o
+						<abbr data-toggle="tooltip" title="para que oremos por lo que tu nos digas">peticion de oracion</abbr>, estaremos
+						pendientes de lo que nos digas!
+					</div>
+				</div>
+				<div class="row">
+					<div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2 pt-2">
+						<form>
+							<div class="form-row">
+								<div class="form-group col-12 col-md-6">
+									<label for="inputEmail4">Nombre</label>
+									<input type="text" class="form-control" placeholder="Tu nombre completo" />
+								</div>
+								<div class="form-group col-12 col-md-6">
+									<label for="inputEmail4">Email</label>
+									<input type="text" class="form-control" placeholder="Tu correo electronico" />
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col">
+									<textarea
+										name="mensaje"
+										class="form-control form-control-lg"
+										placeholder="Tu mensaje o comentario"
+										id="mensaje"
+										cols="30"
+										rows="3"
+									></textarea>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col">
+									<button type="button" class="btn btn-primary btn-block">Enviar</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--Contacto-->
 		<!--Footer-->
 		<footer id="footer" class="pb-4 pt-4">
 			<div class="container">
@@ -273,60 +324,48 @@
 					</div>
 					<div class="modal-body">
 						<!--Contacto-->
-						<section id="contacto" class="pt-2 pb-3">
-							<div class="container">
-								<div class="row">
-									<div class="col text-center">
-										<h2><strong></strong></h2>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col text-center">
-										Mandanos un mensaje, comentario o
-										<abbr data-toggle="tooltip" title="para que oremos por lo que tu nos digas">peticion de oracion</abbr>,
-										estaremos pendientes de lo que nos digas!
-									</div>
-								</div>
-								<div class="row">
-									<div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2 pt-2">
-										<form>
-											<div class="form-row">
-												<div class="form-group col-12 col-md-6">
-													<label for="inputEmail4">Nombre</label>
-													<input type="text" class="form-control" placeholder="Tu nombre completo" />
-												</div>
-												<div class="form-group col-12 col-md-6">
-													<label for="inputEmail4">Email</label>
-													<input type="text" class="form-control" placeholder="Tu correo electronico" />
-												</div>
-											</div>
-											<div class="form-row">
-												<div class="form-group col">
-													<textarea
-														name="mensaje"
-														class="form-control form-control-lg"
-														placeholder="Tu mensaje o comentario"
-														id="mensaje"
-														cols="30"
-														rows="3"
-													></textarea>
-												</div>
-											</div>
-											<div class="form-row">
-												<div class="form-group col">
-													<button type="button" class="btn btn-primary btn-block">Enviar</button>
-												</div>
-											</div>
-										</form>
+						<form>
+							<div class="form-row">
+								<div class="form-group col">
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text" id="basic-addon1">Nombre</span>
+										</div>
+										<input type="text" class="form-control" placeholder="Tu nombre completo" />
 									</div>
 								</div>
 							</div>
-						</section>
+							<div class="form-row">
+								<div class="form-group col">
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text" id="basic-addon1">Email</span>
+										</div>
+										<input type="text" class="form-control" placeholder="Tu correo electronico" />
+									</div>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col">
+									<div class="input-group-prepend">
+										<span class="input-group-text" id="basic-addon1">Mensaje:</span>
+									</div>
+									<textarea
+										name="mensaje"
+										class="form-control form-control-lg"
+										placeholder="Tu mensaje o comentario"
+										id="mensaje"
+										cols="40"
+										rows="3"
+									></textarea>
+								</div>
+							</div>
+						</form>
 						<!--Contacto-->
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+						<button type="button" class="btn btn-primary">Enviar</button>
 					</div>
 				</div>
 			</div>
