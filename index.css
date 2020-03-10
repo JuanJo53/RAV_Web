@@ -32,6 +32,7 @@
 }
 #footer {
 	background-color: #746f6f;
+	align-items: center;
 }
 #footer a {
 	color: white;
