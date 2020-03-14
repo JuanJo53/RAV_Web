@@ -84,6 +84,7 @@
 							<a class="nav-link" href="#">Meditad en Vuestros</a>
 						</li>
 					</ul>
+					<button class="btn btn-primary text-md-" data-toggle="modal" data-target="#modalLogin" role="button">Iniciar</button>
 				</div>
 			</div>
 		</nav>
@@ -436,6 +437,55 @@
 			</div>
 		</div>
 		<!--Modal Contacto-->
+		<!-- Modal Login -->
+		<div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel"><strong>Inicio de Sesion</strong></h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="alert alert-primary" role="alert">
+							Mandanos un mensaje, comentario o
+							<abbr data-toggle="tooltip" title="para que oremos por lo que tu nos digas">peticion de oracion</abbr>, estaremos
+							pendientes de lo que nos digas!
+						</div>
+						<!--Contacto-->
+						<form>
+							<div class="form-row">
+								<div class="form-group col">
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text" id="basic-addon1">Email</span>
+										</div>
+										<input type="text" class="form-control" placeholder="Tu correo electronico" />
+									</div>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col">
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text" id="basic-addon1">Contrasena</span>
+										</div>
+										<input type="text" class="form-control" placeholder="Tu contrasena" />
+									</div>
+								</div>
+							</div>
+						</form>
+						<!--Contacto-->
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+						<button type="button" class="btn btn-primary">Ingresar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Modal Login-->
 		<script
 			src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 			integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
