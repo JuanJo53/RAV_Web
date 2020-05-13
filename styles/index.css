@@ -8,6 +8,9 @@
 #header img {
 	width: 80px;
 }
+#header button {
+	color: white;
+}
 #carousel {
 	position: relative;
 }
@@ -24,6 +27,9 @@
 #carousel .overlay .row {
 	height: 100%;
 }
+#alimentoDiario {
+	position: sticky;
+}
 #main .carousel-inner img {
 	max-height: 70vh;
 	object-fit: cover;
@@ -31,8 +37,15 @@
 }
 #footer {
 	background-color: #746f6f;
+	align-items: center;
 }
 #footer a {
 	color: white;
 	text-decoration: none;
+}
+#footer a:hover {
+	color: blue;
+}
+.sticky-top {
+	position: sticky;
 }
