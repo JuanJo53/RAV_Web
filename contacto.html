@@ -15,7 +15,25 @@
 		<!--Aqui viene el icono de RAV
 			<link rel="icon" href=""
 			>-->
-		<link rel="stylesheet" href="/styles/index.css" />
+		<link rel="stylesheet" href="styles/index.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				$("#enviar").click(function () {
+					var nombre = $("#nombre").val();
+					var correo = $("#correoMen").val();
+					var mensaje = $("#mensaje").val();
+					$.ajax({
+						url: "nuevo_mensaje.php",
+						method: "post",
+						data: { nombre: nombre, correo: correo, mensaje: mensaje },
+						success: function (response) {
+							alert("Mensaje Enviado Correctamente!");
+						}
+					});
+				});
+			});
+		</script>
 	</head>
 	<body data-spy="scroll" data-target="#navbar" data-offset="56">
 		<!--Header-->
@@ -36,10 +54,10 @@
 				<div class="collapse navbar-collapse" id="navbar">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item">
-							<a class="nav-link" href="/index.html">Inicio<span class="sr-only">(current)</span></a>
+							<a class="nav-link" href="index.php">Inicio<span class="sr-only">(current)</span></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="/staticPages/proposito.html">Nuestro Proposito <span class="sr-only">(current)</span></a>
+							<a class="nav-link" href="staticPages/proposito.html">Nuestro Proposito <span class="sr-only">(current)</span></a>
 						</li>
 						<li class="nav-item dropdown">
 							<a
@@ -50,12 +68,13 @@
 								data-toggle="dropdown"
 								aria-haspopup="true"
 								aria-expanded="false"
+								maxlength="200"
 							>
 								Nuestro Credo
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="/staticPages/finalidadFe.html">Finalidad de la Fe</a>
-								<a class="dropdown-item" href="/staticPages/proyeccionFe.html">Proyeccion de la Fe</a>
+								<a class="dropdown-item" href="staticPages/finalidadFe.html">Finalidad de la Fe</a>
+								<a class="dropdown-item" href="staticPages/proyeccionFe.html">Proyeccion de la Fe</a>
 							</div>
 						</li>
 						<li class="nav-item dropdown">
@@ -71,20 +90,19 @@
 								Noticias
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="/ciencia&tec.html">Ciencia y Tecnologia</a>
-								<a class="dropdown-item" href="/profesias.html">Profecia</a>
-								<a class="dropdown-item" href="/desastresNaturales.html">Desastres Naturales</a>
-								<a class="dropdown-item" href="/index.html">Israel</a>
+								<a class="dropdown-item" href="categorias/ciencia&tec.php">Ciencia y Tecnologia</a>
+								<a class="dropdown-item" href="categorias/profesias.php">Profecia</a>
+								<a class="dropdown-item" href="categorias/desastresNaturales.php">Desastres Naturales</a>
+								<a class="dropdown-item" href="categorias/israel.php">Israel</a>
 							</div>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="/staticPages/venidaHijoHombre.html">Asi sera la venida del Hijo del Hombre</a>
+							<a class="nav-link" href="staticPages/venidaHijoHombre.html">Asi sera la venida del Hijo del Hombre</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#main">Contacto</a>
 						</li>
 					</ul>
-					<button class="btn btn-primary text-md-" data-toggle="modal" data-target="#modalLogin" role="button">Iniciar</button>
 				</div>
 			</div>
 		</nav>
@@ -94,13 +112,13 @@
 			<div id="carousel" class="carousel slide" data-ride="carousel" data-pause="false">
 				<div class="carousel-inner">
 					<div class="carousel-item active">
-						<img src="/assets/rios.jpg" class="d-block w-100" alt="Rios1" />
+						<img src="assets/rios.jpg" class="d-block w-100" alt="Rios1" />
 					</div>
 					<div class="carousel-item">
-						<img src="/assets/rios2.jpg" class="d-block w-100" alt="Rios2" />
+						<img src="assets/rios2.jpg" class="d-block w-100" alt="Rios2" />
 					</div>
 					<div class="carousel-item">
-						<img src="/assets/riversunshining2.jpg" class="d-block w-100" alt="Rios3" />
+						<img src="assets/riversunshining2.jpg" class="d-block w-100" alt="Rios3" />
 					</div>
 					<div class="overlay">
 						<div class="container">
@@ -155,15 +173,15 @@
 					</div>
 					<div class="row">
 						<div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2 pt-2">
-							<form>
+							<form action="" method="post">
 								<div class="form-row">
 									<div class="form-group col-12 col-md-6">
-										<label for="inputEmail4">Nombre</label>
-										<input type="text" class="form-control" placeholder="Tu nombre completo" />
+										<label for="nombre">Nombre</label>
+										<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre completo" />
 									</div>
 									<div class="form-group col-12 col-md-6">
-										<label for="inputEmail4">Email</label>
-										<input type="text" class="form-control" placeholder="Tu correo electronico" />
+										<label for="correoMen">Email</label>
+										<input type="text" class="form-control" id="correoMen" name="correoMen" placeholder="Tu correo electronico" />
 									</div>
 								</div>
 								<div class="form-row">
@@ -172,6 +190,7 @@
 											name="mensaje"
 											class="form-control form-control-lg"
 											placeholder="Tu mensaje o comentario"
+											maxlength="200"
 											id="mensaje"
 											cols="30"
 											rows="3"
@@ -180,7 +199,7 @@
 								</div>
 								<div class="form-row">
 									<div class="form-group col">
-										<button type="button" class="btn btn-primary btn-block">Enviar</button>
+										<button type="submit" class="btn btn-primary btn-block" id="enviar" name="enviar">Enviar</button>
 									</div>
 								</div>
 							</form>
@@ -247,118 +266,9 @@
 			</div>
 		</footer>
 		<!--Footer-->
-		<!-- Modal Contacto -->
-		<div class="modal fade" id="modalContact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel"><strong>Contactanos</strong></h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<div class="modal-body">
-						<div class="alert alert-primary" role="alert">
-							Mandanos un mensaje, comentario o
-							<abbr data-toggle="tooltip" title="para que oremos por lo que tu nos digas">peticion de oracion</abbr>, estaremos
-							pendientes de lo que nos digas!
-						</div>
-						<!--Contacto-->
-						<form>
-							<div class="form-row">
-								<div class="form-group col">
-									<div class="input-group mb-3">
-										<div class="input-group-prepend">
-											<span class="input-group-text" id="basic-addon1">Nombre</span>
-										</div>
-										<input type="text" class="form-control" placeholder="Tu nombre completo" />
-									</div>
-								</div>
-							</div>
-							<div class="form-row">
-								<div class="form-group col">
-									<div class="input-group mb-3">
-										<div class="input-group-prepend">
-											<span class="input-group-text" id="basic-addon1">Email</span>
-										</div>
-										<input type="text" class="form-control" placeholder="Tu correo electronico" />
-									</div>
-								</div>
-							</div>
-							<div class="form-row">
-								<div class="form-group col">
-									<div class="input-group-prepend">
-										<span class="input-group-text" id="basic-addon1">Mensaje:</span>
-									</div>
-									<textarea
-										name="mensaje"
-										class="form-control form-control-lg"
-										placeholder="Tu mensaje o comentario"
-										id="mensaje"
-										cols="40"
-										rows="3"
-									></textarea>
-								</div>
-							</div>
-						</form>
-						<!--Contacto-->
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-						<button type="button" class="btn btn-primary">Enviar</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!--Modal Contacto-->
-		<!-- Modal Login -->
-		<div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel"><strong>Inicio de Sesion</strong></h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<div class="modal-body">
-						<div class="alert alert-warning" role="alert">
-							Esta seccion es solo para escritores. Si tu no tienes una cuenta de escritor de esta pagina no podras entrar.
-						</div>
-						<form>
-							<div class="form-row">
-								<div class="form-group col">
-									<div class="input-group mb-3">
-										<div class="input-group-prepend">
-											<span class="input-group-text" id="basic-addon1">Email</span>
-										</div>
-										<input type="text" class="form-control" placeholder="Tu correo electronico" />
-									</div>
-								</div>
-							</div>
-							<div class="form-row">
-								<div class="form-group col">
-									<div class="input-group mb-3">
-										<div class="input-group-prepend">
-											<span class="input-group-text" id="basic-addon1">Contrasena</span>
-										</div>
-										<input type="text" class="form-control" placeholder="Tu contrasena" />
-									</div>
-								</div>
-							</div>
-						</form>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-						<button type="button" class="btn btn-primary">Ingresar</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!--Modal Login-->
 		<script
-			src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-			integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+			src="https://code.jquery.com/jquery-3.4.1.min.js"
+			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 			crossorigin="anonymous"
 		></script>
 		<script
